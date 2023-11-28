@@ -192,7 +192,7 @@ module.exports = function (RED) {
 
             node.status({ fill: "yellow", text: "Updating..." });
             try {
-                bridgeNode.publish(bridgeNode.baseTopic + "/bridge/ota_update/update", device);
+                bridgeNode.publish(bridgeNode.baseTopic + "/bridge/request/device/ota_update/update", device);
                 node.send({
                     payload: {
                         device: device,
